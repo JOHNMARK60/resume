@@ -1,136 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSIT 2-B RESUME</title>
+    <title>Travel Destination Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, rgb(64, 152, 214), #1D3557);
+        /* Custom Styles */
+        .header {
+            background-color: #007bff;
             color: white;
             padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        header img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #fff;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 30px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .box-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .box {
-            background-color: #fff;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
             text-align: center;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
-        .box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        .logo {
+            max-width: 100px;
         }
-
-        .box img {
-            width: 120px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .box h3 {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-
-        .box .view-btn {
-            display: inline-block;
-            padding: 8px 12px;
-            background-color: #3A5A99;
-            color: white;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.9em;
-        }
-
-        .box .view-btn:hover {
-            background-color: #1D3557;
-        }
-
-        footer {
-            background: linear-gradient(135deg, rgb(64, 152, 214), #1D3557);
-            color: white;
-            text-align: center;
+        .destination-box {
             padding: 15px;
-            margin-top: 30px;
+        }
+
+        /* Animation Styles */
+        .destination-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.6s, box-shadow 0.6s;
+        }
+
+        /* Hover Effect */
+        .destination-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Card Title Margin */
+        .card-title {
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="image/logo-slsu.png" alt="Logo">
-    <div>
-        <h1>Southern Leyte State University - Bontoc Campus</h1>
-        <p>Information Technology Resume</p>
+<!-- Navigation Bar with Login Button -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Travel Planner</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Destinations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+        </ul>
+        <a href="login_register.php" class="btn btn-outline-light">Login</a>
     </div>
-</header>
+</nav>
 
-<div class="container">
-    <h2 class="section-title">RESUME BSIT-2B</h2>
-    <div class="box-container">
-        <div class="box"><img src="Abrea/img/IMG_7061.JPG" alt="Leonel Abrea"><h3>Leonel Abrea</h3><a href="http://localhost/all/Mainpage/Abrea/Abrea.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="Baslot/image/baslot.JPG" alt="Ryan Baslot"><h3>Ryan Baslot</h3><a href="http://localhost/all/Mainpage/baslot/baslot.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="image/elyn.jpg" alt="Elyn Joy Batalon"><h3>Elyn Joy Batalon</h3><a href="http://localhost/all/Mainpage/Batalon/batalon.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="Bugnos/img.jpg" alt="CJ Bugnos"><h3>CJ Bugnos</h3><a href="http://localhost/all/Mainpage/Bugnos/bugnos.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="Calunsod/gians.jpg" alt="Gian Calunsod"><h3>Gian Calunsod</h3><a href="http://localhost/all/Mainpage/Calunsod/calunsod.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="Cataylo/rica.jpeg.jpg" alt="Rica Cataylo"><h3>Rica Cataylo</h3><a href="http://localhost/all/Mainpage/Cataylo/cataylo.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="Diabordo/Kier.jpg" alt="Diabordo Kierby"><h3>Diabordo Kierby</h3><a href="http://localhost/all/Mainpage/Diabordo/diabordo.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="Divinagracia/Faith.png" alt="Divinagracia"><h3>Divinagracia</h3><a href="http://localhost/all/Mainpage/Divinagracia/divinagracia.php" class="view-btn">View Resume</a></div>
-        <div class="box"><img src="image/Angelserdanjpg.jpg" alt="Angel Mae Serdan"><h3>Angel Mae Serdan</h3><a href="http://localhost/all/Mainpage/Serdan/serdan.php" class="view-btn">View Resume</a></div>
+<!-- Header with Logo -->
+<div class="header">
+    <h1>Welcome to Travel Planner</h1>
+    <p>Explore the best travel destinations with us!</p>
+</div>
+
+<!-- Destination Boxes -->
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Popular Destinations</h2>
+    <div class="row">
+        <!-- Bontoc Dike Slideshow Box -->
+        <div class="col-md-4 destination-box">
+            <div class="card">
+                <div id="carouselBontocDike" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/JM1.jpg" class="destination-img" alt="Bontoc Dike 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Discover the scenic beauty of Bontoc Dike.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/JM1.jpg" class="destination-img" alt="Bontoc Dike 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Enjoy breathtaking views at sunrise.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/JM1.jpg" class="destination-img" alt="Bontoc Dike 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Explore the lush greenery around the dike.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">BONTOC DIKE</h5>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#bookingModal" data-destination="BONTOC DIKE">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cambodlot Slideshow Box -->
+        <div class="col-md-4 destination-box">
+            <div class="card">
+                <div id="carouselCambodlot" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/JM2.jpg" class="destination-img" alt="Cambodlot 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Experience the serene ambiance of Cambodlot.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/JM2.jpg" class="destination-img" alt="Cambodlot 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Relax by the pristine waters of Cambodlot.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">CAMBODLOT</h5>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#bookingModal" data-destination="CAMBODLOT">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unahan Sa Amo Slideshow Box -->
+        <div class="col-md-4 destination-box">
+            <div class="card">
+                <div id="carouselUnahanSaAmo" class="carousel slide" data-ride="carousel" data-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/JM3.jpg" class="destination-img" alt="Unahan Sa Amo 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Relax and unwind at Unahan Sa Amo.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/JM3.jpg" class="destination-img" alt="Unahan Sa Amo 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <p>Embrace tranquility and nature.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">UNAHAN SA AMO</h5>
+                    <button class="btn btn-success" data-toggle="modal" data-target="#bookingModal" data-destination="UNAHAN SA AMO">Book Now</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<footer>
-    <p>&copy; 2025 Southern Leyte State University | Bontoc Campus</p>
-</footer>
+
+<!-- Booking Modal -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="book_ticket.php">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bookingModalLabel">Book a Ticket</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" name="destination" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit Booking</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Populate the destination field in the modal
+    $('#bookingModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); 
+        var destination = button.data('destination'); 
+        var modal = $(this);
+        modal.find('#destination').val(destination);
+    });
+</script>
 
 </body>
 </html>
